@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Artesanato e Arte Contemporânea de Angola</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+   <nav class="navbar">
+        <div class="navbar-container">
+                
+<img src="../imagens/logo.png" width="80px" height="80px" id="img1">
+            <ul class="navbar-menu">
+                  <li class="navbar-item"><a href="../index.html" class="navbar-link">Página Inicial</a></li>
+                <li class="navbar-item"><a href="contact.html" class="navbar-link">Contacte-nos</a></li>
+                 </ul>
+        </div>
+    </nav>
+
+    <header class="quiz-header">
+        <div class="header-content">
+            <h1>Quiz de Arte Angolana</h1>
+            <p>Teste os seus conhecimentos sobre o artesanato e arte contemporânea de Angola</p>
+        </div>
+    </header>
+
+    <main class="quiz-container">
+        <div class="quiz-content">
+            <div class="quiz-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span class="progress-text" id="progressText">Pergunta 1 de 10</span>
+            </div>
+
+            <div class="quiz-card" id="quizCard">
+                <div class="question-container">
+                    <h2 class="question-title" id="questionTitle">Qual é o material mais tradicionalmente usado nas esculturas angolanas?</h2>
+                    <div class="options-container" id="optionsContainer">
+                        <button class="option-btn" onclick="selectAnswer(0)">Madeira</button>
+                        <button class="option-btn" onclick="selectAnswer(1)">Pedra</button>
+                        <button class="option-btn" onclick="selectAnswer(2)">Metal</button>
+                        <button class="option-btn" onclick="selectAnswer(3)">Argila</button>
+                    </div>
+                </div>
+                
+                <div class="quiz-controls">
+                    <button class="btn-secondary" id="prevBtn" onclick="previousQuestion()" disabled>Anterior</button>
+                    <button class="btn-primary" id="nextBtn" onclick="nextQuestion()" disabled>Próxima</button>
+                </div>
+            </div>
+
+            <div class="quiz-results" id="quizResults" style="display: none;">
+                <div class="results-content">
+                    <h2>Parabéns! Quiz Concluído</h2>
+                    <div class="score-display">
+                        <span class="score-number" id="finalScore">0</span>
+                        <span class="score-total">/ 10</span>
+                    </div>
+                    <p class="score-message" id="scoreMessage"></p>
+                    <button class="btn-primary" onclick="restartQuiz()">Refazer Quiz</button>
+                    <a href="../index.html" class="btn-secondary">Voltar à Página Inicial</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 - Artesanato e Arte Contemporânea de Angola</p>
+            <ul class="footer-links">   
+            
+            </ul>
+        </div>
+    </footer>
+
+    <script src="quiz.js"></script>
+</body>
+
+</html>
+

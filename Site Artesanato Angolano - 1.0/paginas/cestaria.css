@@ -1,0 +1,201 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+.contact-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+
+   url('../imagens/cestaria.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 120px 20px;
+    text-align: center;
+    position: relative;
+    
+    
+}
+main h2{
+    font-weight: 700;
+    border-left: #333 solid 4px;
+    padding-left: 8px;
+    color: #333;
+    
+}
+
+h3{
+    font-weight: 700;
+    color: #333;
+}
+#esculturas p{
+    margin-bottom: 34px;
+    color: #555;
+    font-weight: 300;
+}
+
+main article{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+ article{
+text-align: justify;
+line-height: 1.6;
+}
+
+
+
+.main-footer {
+    background-color: #333;
+    color: #eee;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Responsividade para a página de contacto */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact-form h3,
+    .contact-info h3,
+    .developers h3,
+    .newsletter h3 {
+        text-align: center;
+    }
+
+    .contact-form button {
+        align-self: stretch;
+    }
+
+    .developer-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form input {
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .newsletter-form button {
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-header h1 {
+        font-size: 2.5em;
+    }
+    
+    .contact-header h2 {
+        font-size: 1.2em;
+    }
+
+    .developer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+
+.navbar-item {
+    margin-left: 30px;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+    background: #444;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 12px 30px;
+}
+
+.navbar-link:hover {
+    background-color: #6e3011;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-item {
+        margin: 10px 0;
+    }
+
+    .navbar-toggle {
+        display: block;
+        color: #fff;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+}
+
+
+

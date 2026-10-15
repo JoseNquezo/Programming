@@ -1,0 +1,267 @@
+
+/* Estilos CSS para um visual diferenciado e elegante */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.main-header {
+    background: linear-gradient(135deg, #a85a32, #3d2b1f);
+    /* Tons terrosos ricos */
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.header-content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.site-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.1;
+}
+
+.title-prefix {
+    color: #d4a373;
+    /* Um tom mais claro para destaque */
+}
+
+.site-description {
+    font-size: 1.2em;
+    color: #eee;
+    font-weight: 300;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.wonder-section {
+    display: flex;
+    margin-bottom: 80px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+}
+
+.wonder-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.wonder-visual {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.wonder-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.wonder-visual:hover img {
+    transform: scale(1.05);
+}
+
+.visual-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.wonder-visual:hover .visual-overlay {
+    opacity: 1;
+}
+
+.wonder-details {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.wonder-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    color: #a85a32;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.wonder-location {
+    font-size: 1.1em;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.wonder-description {
+    font-size: 1.05em;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #a85a32;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+    background-color: #3d2b1f;
+}
+
+.main-footer {
+    background-color: #333;
+    color: #eee;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links ul {
+  
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-links li {
+   
+    list-style: none;
+
+}
+
+.footer-links a {
+    padding: 12px 30px;
+    color: #eee;
+    background: #444;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+   
+}
+
+.header-links a{
+    padding: 12px 30px;
+    color: #eee;
+    background: #6e3011;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    float: right;
+}
+
+.header-links a:hover{
+    background: #333;
+}
+
+.footer-links a:hover {
+    background-color: #6e3011;
+ 
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 980px) {
+    .wonder-section {
+        flex-direction: column;
+    }
+
+    .wonder-section.reverse {
+        flex-direction: column;
+    }
+
+    .wonder-visual {
+        width: 100%;
+        height: auto;
+    }
+
+    .wonder-details {
+        padding: 30px;
+    }
+
+    .site-title {
+        font-size: 3em;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links ul {
+        margin-top: 20px;
+    }
+
+    .footer-links li {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-title {
+        font-size: 2.5em;
+    }
+
+    .wonder-details {
+        padding: 20px;
+    }
+
+    .wonder-title {
+        font-size: 2.2em;
+    }
+
+    .wonder-location {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .wonder-description {
+        font-size: 0.95em;
+        margin-bottom: 20px;
+    }
+
+    .learn-more {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}

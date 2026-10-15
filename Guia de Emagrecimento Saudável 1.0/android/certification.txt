@@ -1,0 +1,24 @@
+---------------------------------------------------
+Here are the ownership and the certification details
+of the Guia de Emagrecimento Saudável 1.0
+---------------------------------------------------
+
+app_name - 						Guia de Emagrecimento Saudável
+app_alias - 					guiadeemagrecimentosaudvel
+app_author_name - 				My Company
+app_author_organizational - 	My Company
+app_author_organization - 		My Company
+app_author_locality - 			My Company
+app_author_state - 				Luanda
+app_author_country - 			Angola
+app_password - 					v6vlM1u9io5X
+app_versionName - 				versionName "1.0"
+app_versionCode - 				100
+
+---------------------------------------------------
+The certification was created by WebIntoApp.com at
+the Wednesday 1st of October 2025 11:19:16 PM
+
+https://webintoapp.com
+---------------------------------------------------
+
