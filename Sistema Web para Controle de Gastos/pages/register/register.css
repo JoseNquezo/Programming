@@ -1,0 +1,133 @@
+body, input, button {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-background {
+    background: linear-gradient(120deg, #2dd36f, #1abc9c);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 350px;
+    padding: clamp(20px, 5vw, 40px);
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+form h2 {
+    margin-bottom: clamp(15px, 3vw, 20px);
+    color: #333;
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.form-field {
+    margin-bottom: clamp(12px, 2vw, 15px);
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: clamp(10px, 3vw, 12px);
+    transition: all 0.3s ease;
+    font-size: clamp(14px, 3vw, 16px);
+    width: 100%;
+}
+
+input:focus {
+    border-color: #2dd36f;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(45, 211, 111, 0.2);
+}
+
+button {
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: clamp(10px, 3vw, 12px);
+    margin-top: clamp(8px, 2vw, 10px);
+    font-size: clamp(14px, 3vw, 16px);
+    width: 100%;
+    cursor: pointer;
+}
+
+button.clear {
+    background: transparent;
+    color: #2dd36f;
+    border: none;
+    text-align: center;
+    padding: clamp(8px, 2vw, 10px);
+}
+
+button.solid {
+    background: #2dd36f;
+    color: white;
+    border: none;
+}
+
+button.solid:hover {
+    background: #25a25a;
+    transform: translateY(-2px);
+}
+
+.error {
+    font-size: clamp(12px, 3vw, 14px);
+    padding: clamp(5px, 2vw, 8px);
+    background: #e74c3c;
+    color: white;
+    margin-top: clamp(4px, 1vw, 5px);
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+}
+
+/* Ajustes para telas muito pequenas (menos de 300px) */
+@media (max-width: 300px) {
+    .login-box {
+        padding: 15px;
+        margin: 10px;
+        border-radius: 15px;
+    }
+    
+    form h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Ajustes para orientação landscape em mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .login-background {
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+    
+    .login-box {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Melhorias para tablets e telas maiores */
+@media (min-width: 768px) {
+    .login-box {
+        max-width: 380px;
+    }
+    
+    button:hover {
+        transform: translateY(-2px);
+    }
+}

@@ -1,0 +1,164 @@
+body, input, button, select {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.transaction-box {
+    width: 90%;
+    max-width: 350px;
+    background: white;
+    padding: clamp(20px, 3vw, 30px);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin: 20px auto;
+}
+
+.home-header {
+    background: #2dd36f;
+    color: white;
+    padding: clamp(12px, 3vw, 16px) clamp(15px, 4vw, 20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  
+}
+
+.home-header h2 {
+    margin: 0;
+    font-weight: 600;
+    font-size: clamp(1.25rem, 5vw, 1.5rem);
+}
+
+.home-header button.clear {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: clamp(1rem, 4vw, 1.125rem);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: clamp(4px, 2vw, 8px);
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.home-header button.clear:hover {
+    color: #1aa34a;
+}
+
+.home-header button.clear i {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+}
+
+.form-field {
+    margin-bottom: clamp(10px, 2vw, 15px);
+    display: flex;
+    flex-direction: column;
+}
+
+input, select {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: clamp(8px, 2vw, 10px);
+    font-size: clamp(0.875rem, 3vw, 0.9rem);
+    margin-top: clamp(3px, 1vw, 5px);
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+    border-color: #2dd36f;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(45, 211, 111, 0.2);
+}
+
+button {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: clamp(8px, 2vw, 10px);
+    font-weight: 600;
+    padding: clamp(10px, 3vw, 12px) 0;
+    cursor: pointer;
+    font-size: clamp(0.875rem, 3vw, 1rem);
+    transition: all 0.3s ease;
+}
+
+button.solid {
+    background-color: #2dd36f;
+    border: none;
+    color: white;
+}
+
+button.solid:disabled {
+    background-color: #a1d9a5;
+    cursor: not-allowed;
+}
+
+button.solid:not(:disabled):hover {
+    background-color: #25a25a;
+    transform: translateY(-2px);
+}
+
+button.clear {
+    background: transparent;
+    border: 2px solid #2dd36f;
+    color: #2dd36f;
+}
+
+button.clear:hover {
+    background-color: #2dd36f;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.error {
+    font-size: clamp(0.75rem, 3vw, 0.8rem);
+    padding: clamp(4px, 1.5vw, 5px);
+    background: #e74c3c;
+    color: white;
+    margin-top: clamp(3px, 1vw, 5px);
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+}
+
+/* Landscape orientation for mobile devices */
+@media (max-height: 500px) and (orientation: landscape) {
+    .transaction-box {
+        margin: 10px auto;
+        padding: 15px;
+    }
+    
+    .home-header {
+        padding: 10px 15px;
+    }
+}
+
+/* Larger screens (tablets and desktops) */
+@media (min-width: 768px) {
+    .transaction-box {
+        max-width: 400px;
+    }
+    
+    .home-header {
+        padding: 16px 30px;
+    }
+    
+    button:hover {
+        transform: translateY(-2px);
+    }
+}
+
+/* Extra large screens */
+@media (min-width: 1200px) {
+    .transaction-box {
+        max-width: 450px;
+        padding: 30px 40px;
+    }
+}

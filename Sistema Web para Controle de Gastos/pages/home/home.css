@@ -1,0 +1,431 @@
+
+body, input, button {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.home-header {
+  background: #2dd36f;
+  color: white;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+
+.home-main {
+  padding: 20px;
+}
+
+.balance-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+.balance-box,
+.saldo-geral-container {
+  flex: 1 1 300px;
+  max-width: 380px;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.balance-box h3,
+.saldo-geral-container h3 {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.6rem;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.balance-box span,
+.saldo-geral-container,{
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.35rem;
+  color: #555;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.balance-receitas {
+  border-left: 10px solid #4CAF50;
+}
+
+.balance-despesas {
+  border-left: 10px solid #E53935;
+}
+
+.saldo-geral-container {
+  border-left: 10px solid #777;
+  
+
+}
+
+
+.saldo-geral-container {
+  border-left: 10px solid #777;
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  
+  
+}
+
+
+
+
+
+.saldo-positivo {
+  color: green;
+  font-weight: bold;
+}
+
+.saldo-negativo {
+  color: red;
+  font-weight: bold;
+}
+
+.saldo-zero {
+  color: gray;
+  font-weight: bold;
+}
+
+
+.transaction-list {
+  list-style: none;
+  padding: 0;
+}
+
+.transaction-list li {
+  background: #fff;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  padding: 12px 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.transaction-list li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.transaction-list li.Despesa {
+  border-left: 10px solid #e74c3c;
+}
+
+.transaction-list li.Receita {
+  border-left: 10px solid #28a745;
+}
+
+.transaction-list p {
+  margin: 4px 0;
+}
+
+button.danger {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  display: none;
+  background: transparent;
+  border: 2px solid #e74c3c;
+  color: #e74c3c;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 200px;
+}
+
+button.danger:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.transaction-list li:hover button.danger {
+  display: block;
+}
+
+.fab.fixed.bottom.right {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 56px;
+  height: 56px;
+  background: #ebebeb;
+  color: #222;
+  border-radius: 50%;
+  font-size: 36px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 6px 4px 8px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.fab.fixed.bottom.right:hover {
+  background-color: #e6ffe6;
+}
+
+
+button.clear {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+button.clear:hover {
+  color: #c6f5d8;
+}
+
+
+.filter-container {
+  display: flex;
+  gap: 16px;
+  margin: 50px 0 10px;
+  padding: 16px;
+  box-shadow: 4px 1px 4px rgba(0,0,0,0.1);
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+.filter-container select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+
+.balance-display {
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #2dd36f;
+}
+
+
+#export-pdf-btn {
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: #238655;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100px;
+  font-weight: 600;
+}
+
+#export-pdf-btn:hover {
+  background-color: #096868;
+}
+
+
+.transaction-item {
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 18px;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.transaction-item:hover {
+  background-color: #f0f0f0;
+}
+
+.transaction-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.transaction-group {
+  flex: 1 1 160px;
+  display: flex;
+  flex-direction: column;
+  min-width: 140px;
+}
+
+.transaction-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.transaction-value {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #222;
+}
+
+.transaction-receita {
+  border-left: 5px solid #4CAF50;
+}
+
+.transaction-despesa {
+  border-left: 5px solid #F44336;
+}
+
+.transaction-remove {
+  align-self: flex-start;
+  background-color: transparent;
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* RESPONSIVO - MOBILE */
+@media (max-width: 600px) {
+  .home-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .balance-container {
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .balance-box,
+  .saldo-geral-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.25rem;
+  }
+
+ 
+
+  .filter-container {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .fab.fixed.bottom.right {
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    font-size: 30px;
+  }
+
+  button.danger {
+    width: 100%;
+    top: auto;
+    bottom: 10px;
+    right: 10px;
+    font-size: 13px;
+    padding: 6px;
+  }
+}
+
+/* RESPONSIVO - TABLET */
+@media (max-width: 900px) {
+  .filter-container {
+    flex-direction: column;
+  }
+
+  .balance-box h3,
+  .saldo-geral-container h3 {
+    font-size: 2rem;
+  }
+
+  .balance-box span,
+  .saldo-geral-container span {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+button.danger, .transaction-remove {
+  padding: 3px 8px;       
+  font-size: 0.7rem;     
+  width: auto;            
+  min-width: 70px;        
+  border-width: 1px;    
+  margin: 0;              
+}
+
+
+@media (max-width: 600px) {
+  button.danger, .transaction-remove {
+    padding: 4px 8px;    
+    font-size: 0.65rem;   
+  }
+}
+
+
+.balance-box span {
+  color: #555 !important; 
+}
+
+
+.balance-receitas {
+  border-left: 10px solid #4CAF50; 
+}
+
+.balance-despesas {
+  border-left: 10px solid #E53935;
+}
+
+
+.transaction-list li:hover button.danger {
+  display: inline-block;
+}
+
+@media (max-width: 600px) {
+  .transaction-list li:hover button.danger {
+    display: block;
+    width: 100%;
+  }
+}
+
+
+
